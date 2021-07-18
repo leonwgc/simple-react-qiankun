@@ -1,7 +1,7 @@
 {
   "name": "simple-react-qiankun",
-  "version": "0.1.1",
-  "description": "storage in browser",
+  "version": "0.1.2",
+  "description": "react轻松接入qiankun微前端",
   "keywords": [
     "react",
     "qiankun",
@@ -67,6 +67,7 @@
     ]
   },
   "dependencies": {
-    "qiankun": "^2.4.3"
+    "qiankun": "^2.4.3",
+    "nanoid": "^3.1.23"
   }
 }

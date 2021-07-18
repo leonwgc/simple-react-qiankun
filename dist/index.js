@@ -2,6 +2,7 @@
 
 var React = require('react');
 var qiankun = require('qiankun');
+var nanoid = require('nanoid');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -66,7 +67,11 @@ var QKMicroAppRender = function QKMicroAppRender(_ref) {
   var containerRef = React.useRef();
   var appRef = React.useRef(null);
   React.useEffect(function () {
-    appRef.current = qiankun.loadMicroApp(_objectSpread2(_objectSpread2({}, app), {}, {
+    var _app$name = app.name,
+        name = _app$name === void 0 ? nanoid.nanoid() : _app$name;
+    appRef.current = qiankun.loadMicroApp(_objectSpread2(_objectSpread2({
+      name: name
+    }, app), {}, {
       container: containerRef.current
     }), configuration);
     var _app$entry = app.entry,

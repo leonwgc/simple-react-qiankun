@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 import { AppMetadata, FrameworkConfiguration } from 'qiankun';
 declare type QKMicroAppRenderProps = {
     app: AppMetadata & {
+        name?: string;
         [p: string]: unknown;
     };
     configuration?: FrameworkConfiguration;

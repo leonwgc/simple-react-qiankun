@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { loadMicroApp } from 'qiankun';
+import { nanoid } from 'nanoid';
 
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
@@ -60,7 +61,11 @@ var QKMicroAppRender = function QKMicroAppRender(_ref) {
   var containerRef = useRef();
   var appRef = useRef(null);
   useEffect(function () {
-    appRef.current = loadMicroApp(_objectSpread2(_objectSpread2({}, app), {}, {
+    var _app$name = app.name,
+        name = _app$name === void 0 ? nanoid() : _app$name;
+    appRef.current = loadMicroApp(_objectSpread2(_objectSpread2({
+      name: name
+    }, app), {}, {
       container: containerRef.current
     }), configuration);
     var _app$entry = app.entry,

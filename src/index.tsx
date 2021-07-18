@@ -1,8 +1,9 @@
 import React, { ReactElement, useEffect, useRef } from 'react';
 import { AppMetadata, FrameworkConfiguration, loadMicroApp } from 'qiankun';
+import { nanoid } from 'nanoid';
 
 type QKMicroAppRenderProps = {
-  app: AppMetadata & { [p: string]: unknown };
+  app: AppMetadata & { name?: string; [p: string]: unknown };
   configuration?: FrameworkConfiguration;
 };
 
@@ -11,8 +12,10 @@ const QKMicroAppRender = ({ app, configuration }: QKMicroAppRenderProps): ReactE
   const appRef = useRef(null);
 
   useEffect(() => {
+    const { name = nanoid() } = app;
     appRef.current = loadMicroApp(
       {
+        name,
         ...app,
         container: containerRef.current,
       },
