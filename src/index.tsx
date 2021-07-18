@@ -3,7 +3,7 @@ import { Entry, FrameworkConfiguration, loadMicroApp } from 'qiankun';
 import { nanoid } from 'nanoid';
 
 type QKMicroAppRenderProps = {
-  app: { name?: string; entry: Entry; props: Record<string, unknown> };
+  app: { name?: string; entry: Entry; props?: Record<string, unknown> };
   configuration?: FrameworkConfiguration;
 };
 

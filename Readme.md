@@ -36,7 +36,7 @@ declare type QKMicroAppRenderProps = {
     app: {
         name?: string;
         entry: Entry;
-        props: Record<string, unknown>;
+        props?: Record<string, unknown>;
     };
     configuration?: FrameworkConfiguration;
 };
