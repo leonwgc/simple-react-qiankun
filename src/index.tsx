@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useRef } from 'react';
+import React, { ReactNode, useEffect, useRef } from 'react';
 import { AppMetadata, FrameworkConfiguration, loadMicroApp } from 'qiankun';
 
 type QKMicroAppRenderProps = {
@@ -6,7 +6,7 @@ type QKMicroAppRenderProps = {
   configuration?: FrameworkConfiguration;
 };
 
-const QKMicroAppRender = ({ app, configuration }: QKMicroAppRenderProps): ReactElement => {
+const QKMicroAppRender = ({ app, configuration }: QKMicroAppRenderProps): ReactNode => {
   const containerRef = useRef();
   const appRef = useRef(null);
 
