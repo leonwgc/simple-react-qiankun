@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactElement } from 'react';
 import { AppMetadata, FrameworkConfiguration } from 'qiankun';
 declare type QKMicroAppRenderProps = {
     app: AppMetadata & {
@@ -6,5 +6,5 @@ declare type QKMicroAppRenderProps = {
     };
     configuration?: FrameworkConfiguration;
 };
-declare const QKMicroAppRender: ({ app, configuration }: QKMicroAppRenderProps) => ReactNode;
+declare const QKMicroAppRender: ({ app, configuration }: QKMicroAppRenderProps) => ReactElement;
 export default QKMicroAppRender;
