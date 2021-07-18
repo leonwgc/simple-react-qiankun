@@ -1,6 +1,6 @@
 {
   "name": "simple-react-qiankun",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "react轻松接入qiankun微前端",
   "keywords": [
     "react",
